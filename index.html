@@ -3,49 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Chat App | Frontend Mentor</title>
 </head>
 <body>
-
-  Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <div class="phone">
+      <div class="phone__nav">
+        <div class="phone__nav-back"></div>
+        <div class="phone__nav-image"><img src="images/avatar.jpg" alt="" style="height: 32px;width: 32px;"></div>
+        <div class="phone__nav-name">
+          <p class="name">Samuel Green</p>
+          <p class="available">Available to Walk</p>
+        </div>
+      </div>
+      <div class="phone__chat">
+        <div class="phone__chat-recipient">
+          <p>That sounds great. I’d be happy with that.</p>
+          <p>Could you send over some pictures of your dog, please?</p>
+        </div>
+        <div class="phone__chat-you">
+          <div class="img__group">
+            <img src="images/dog-image-1.jpg" alt="" class="dog-img">
+            <img src="images/dog-image-2.jpg" alt="" class="dog-img">
+            <img src="images/dog-image-3.jpg" alt="" class="dog-img">
+          </div>
+          <p>  Here are a few pictures. She’s a happy girl!</p>
+          <p>  Can you make it?</p>
+        </div>
+        <div class="phone__chat-recipient">
+          <p>  She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+          <div class="price-box">
+              <p>  30 minute walk <span>$29</span></p>
+              <p>  30 minute walk <span>$49</span></p>
+          </div>
+        </div>
+        <div class="phone__chat-send">
+          <input type="text" placeholder="Type a message…">
+          <input type="submit" value="send">
+        </div>
+      </div>
+    </div>
+    <section class="copy">
+      <h1>  Simple booking</h1>
+      <p>
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+        discuss arrangements and make bookings. Once the walk has been completed you can rate 
+        your walker and book again all through the chat.</p>
+    </section>
+  </main>
 </body>
 </html>
