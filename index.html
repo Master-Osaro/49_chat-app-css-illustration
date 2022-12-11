@@ -5,52 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Chat App | Frontend Mentor</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <main>
-    <div class="phone">
-      <div class="phone__nav">
-        <div class="phone__nav-back"></div>
-        <div class="phone__nav-image"><img src="images/avatar.jpg" alt="" style="height: 32px;width: 32px;"></div>
-        <div class="phone__nav-name">
-          <p class="name">Samuel Green</p>
-          <p class="available">Available to Walk</p>
+    <div class="container">
+      <div class="phone">
+        <div class="phone__camera"></div>
+        <div class="phone__inner">
+          <div class="phone__nav">
+            <div class="phone__nav-inner">
+              <div class="phone__nav-inner1">
+                <div class="phone__nav-back"><img src="images/icon-arrow.svg" alt=""></div>
+                <div class="phone__nav-image"><img src="images/avatar.jpg" alt="" style="height: 32px;width: 32px;"></div>
+                <div class="phone__nav-name">
+                  <p class="name">Samuel Green</p>
+                  <p class="available">Available to Walk</p>
+                </div>
+              </div>
+              <div class="phone__nav-inner2">
+                <div class="menu-icon__wrapper">
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="phone__chat">
+            <div class="phone__chat-recipient">
+              <p>That sounds great. I’d be happy with that.</p>
+              <p>Could you send over some pictures of your dog, please?</p>
+            </div>
+            <div class="phone__chat-you">
+              <div class="img__group">
+                <img src="images/dog-image-1.jpg" alt="" class="dog-img">
+                <img src="images/dog-image-2.jpg" alt="" class="dog-img">
+                <img src="images/dog-image-3.jpg" alt="" class="dog-img">
+              </div>
+              <p>  Here are a few pictures. She’s a happy girl!</p>
+              <p>  Can you make it?</p>
+            </div>
+            <div class="phone__chat-recipient">
+              <p>  She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+              <div class="price-box">
+                <div class="pricing__wrapper">
+                  <div class="pricing__wrapper1">
+                    <input type="radio" name="pricing" id="30min">
+                    <label for="30min">30 minute walk <span>$29</span></label>
+                  </div>
+                  <div class="pricing__wrapper1">
+                    <input type="radio" name="pricing" id="1hr">
+                    <label for="1hr">1 hour walk <span>$49</span></label>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="phone__chat-send">
+              <input type="text" placeholder="Type a message…" class="phone__chat-send--input">
+              <button type="submit" class="phone__chat-send--btn"><img src="images/icon-arrow.svg" alt=""></button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="phone__chat">
-        <div class="phone__chat-recipient">
-          <p>That sounds great. I’d be happy with that.</p>
-          <p>Could you send over some pictures of your dog, please?</p>
-        </div>
-        <div class="phone__chat-you">
-          <div class="img__group">
-            <img src="images/dog-image-1.jpg" alt="" class="dog-img">
-            <img src="images/dog-image-2.jpg" alt="" class="dog-img">
-            <img src="images/dog-image-3.jpg" alt="" class="dog-img">
-          </div>
-          <p>  Here are a few pictures. She’s a happy girl!</p>
-          <p>  Can you make it?</p>
-        </div>
-        <div class="phone__chat-recipient">
-          <p>  She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-          <div class="price-box">
-              <p>  30 minute walk <span>$29</span></p>
-              <p>  30 minute walk <span>$49</span></p>
-          </div>
-        </div>
-        <div class="phone__chat-send">
-          <input type="text" placeholder="Type a message…">
-          <input type="submit" value="send">
-        </div>
-      </div>
+      <section class="copy">
+        <h1>  Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+          discuss arrangements and make bookings. Once the walk has been completed you can rate 
+          your walker and book again all through the chat.</p>
+      </section>
     </div>
-    <section class="copy">
-      <h1>  Simple booking</h1>
-      <p>
-        Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-        discuss arrangements and make bookings. Once the walk has been completed you can rate 
-        your walker and book again all through the chat.</p>
-    </section>
+    
   </main>
 </body>
 </html>

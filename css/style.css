@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+
+    /* #### Text */
+
+    --Pale-Violet-sub-heading-the-top-app-UI: hsl(276, 100%, 81%);
+    --Moderate-Violet-chat-on-the-left: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet-chat-on-the-right: hsl(271, 15%, 43%);
+    --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+
+    /* #### Gradients */
+
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Magenta-transparent: hsla(293, 100%, 63%,0.2);
+    --Light-Violet: hsl(264, 100%, 61%);
+    --Light-Violet-transparent: hsl(264, 100%, 61%,0.15);
+
+    /* ### Secondary */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet-app-background: hsl(0, 0%, 97%);
+    --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+    --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+
+    /* ## Typography */
+
+    /* ### Body Copy */
+
+    --Font-size: 10.5px;
+}
+
+input{
+    font-family: inherit;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    /* font-size: var(--Font-size); */
+}
+main{
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 450px;
+    height: 95vh;
+    background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+    border-radius: 0 0 20rem 20rem;
+    z-index: -1;
+
+}
+
+@media screen and (max-width: 720px) {
+    main{
+        padding: 2rem 0;
+    }
+    main::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 150px;
+        height: 450px;
+        background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+        border-radius: 0 0 20rem 0;
+        z-index: -1;
+    
+    }
+    
+}
+
+.container{
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    .container{
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    
+}
+.phone{
+    padding: 1rem;
+    background: var(--White);
+    border-radius: 1.5rem;
+    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.15);
+    /* width: 234px;
+    height: 506.4px; */
+    width: 257.4px;
+    height: 557.04px;
+    font-size: var(--Font-size);
+    position: relative;
+    justify-self: flex-end;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    .phone{
+        justify-self: unset;
+    }
+    
+}
+
+.phone__inner{
+    background-color: var(--Light-Grayish-Violet-app-background);
+    border-radius: 1.3rem;
+    width: 100%;
+}
+
+.phone__camera{
+    width: 130px;
+    height: 30px;
+    display: inline-block;
+    padding: 1rem;
+    transform: translateY(15px);
+    margin-top: -30px;
+    border-radius: 1rem;
+    z-index: 2;
+    background-color: var(--White);
+}
+
+.phone__nav{
+    height: 72px;
+    background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+    color: var(--White);
+    border-radius: 1.5rem 1.5rem 0.25rem 0.25rem;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.3rem;
+    align-items: center;
+}
+.phone__nav-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone__nav-inner1{
+    display: flex;
+    align-items: center;
+}
+
+.phone__nav-back{
+    transform: rotateY(180deg);
+    margin-right: 0.65rem;
+    cursor: pointer;
+}
+
+.phone__nav-image img{
+    border-radius: 20px;
+    margin-right: 0.5rem;
+}
+
+.available{
+    color: var(--Pale-Violet-sub-heading-the-top-app-UI);
+}
+.circle{
+    background: white;
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.menu-icon__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.phone__chat {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.phone__chat-you img{
+    width: 48px;
+    height: 48px;
+    border-radius: 0.85rem;
+}
+
+.phone__chat-you{
+    align-self: flex-end;
+}
+.phone__chat-recipient,
+.phone__chat-you{
+    width: 156px;
+}
+
+.phone__chat-recipient p{
+    color: var(--Moderate-Violet-chat-on-the-left);
+    background: var(--Light-Violet-transparent);
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+.phone__chat-you p{
+    color: var(--Dark-Grayish-Violet-paragraph);
+    background: var(--Light-Grayish-Violet-app-background);
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 2px 3px 10px 3px rgba(0, 0, 0, 0.05);
+}
+.phone__chat-you div{
+    margin-bottom: 0.5rem;
+}
+
+.phone__chat-send{
+    display: flex;
+    position: relative;
+}
+
+.phone__chat-send--input,
+.phone__chat-send--btn{
+    padding: 0.65rem 0;
+    border-radius: 5rem;
+    border: none;
+}
+
+.phone__chat-send--input{
+    width: 100%;
+    padding-left: 0.5rem;
+}
+.phone__chat-send--input::placeholder{
+    color: var(--Grayish-Blue-placeholder-text);
+}
+.phone__chat-send--btn{
+    position: absolute;
+    right: 0;
+    padding: 0.65rem 0.9rem;
+    cursor: pointer;
+    background-color: var(--Very-Dark-Desaturated-Violet-submit-button-background);
+    color: var(--White);
+}
+
+.price-box .pricing__wrapper1{
+    background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
+    color: var(--White) !important;
+    margin-bottom: 0.5rem;
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.2rem;
+    display: flex;
+    align-items: center;
+}
+.price-box label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.copy h1{
+    font-size: 2.2rem;
+    color: var(--Very-Dark-Desaturated-Violet-main-heading);
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 720px) {
+    .copy{
+        text-align: center;
+        padding: 1rem;
+    }
+
+    
+}
