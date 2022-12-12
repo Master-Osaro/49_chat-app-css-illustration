@@ -272,6 +272,7 @@ main::before{
     color: var(--White);
 }
 
+
 .price-box .pricing__wrapper1{
     background: linear-gradient(var(--Light-Magenta),var(--Light-Violet));
     color: var(--White) !important;
@@ -280,17 +281,30 @@ main::before{
     border-radius: 0.5rem 0.5rem 0.5rem 0.2rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .price-box label{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    cursor: pointer;
 }
 
+#radio30min, #radio1hr{
+    margin-right: 0.2rem;
+    cursor: pointer;
+}
+
+
 .copy h1{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: var(--Very-Dark-Desaturated-Violet-main-heading);
     margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+.copy p{
+    line-height: 1.5rem;
+    color: var(--Dark-Grayish-Violet-paragraph);
 }
 
 @media screen and (max-width: 720px) {
